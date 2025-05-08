@@ -1,15 +1,3 @@
-# Документация для создания файла .exe (Windows) и .app (MacOS) упаковки и развертывания приложения
-#### 1. Сoздаем директорию для хранения модели, данных (background.jpg, logo.png, requirements.txt, .ico, .icns etc.), инструкций и исполняемых файлов, например app.py
-#### 2. Устанавливаем pyinstaller в cmd с помощью команды pip install pyinstaller
-#### 3. Создаем файлы инструкций: app.spec и setup.py для создания .exe при вызове pyinstaller app.spec в cmd из директории проекта
-#### 4. Собираем зависимости в файл requirements.txt (команда !pip freeze > requirements.txt в ячейке Jupiter notebook). Файл сохраняется в директории проекта
-#### 5. Скачиваем иконки для логотипов или приложения с сайта https://www.logoai.com например https://www.logoai.com/png/1360 (для нашего приложения)
-#### 6. Конвертируем нашу иконку в формат .ico (Windows) онлайн https://convertico.com или в формат .icns (MacOs) онлайн https://cloudconvert.com/png-to-icns
-#### 7. Скачиваем Inno Setup с ресурса https://jrsoftware.org/isinfo.php или сразу с https://jrsoftware.org/isdl.php
-#### 8. Создаем установочный файл setup.iss который запускаем через приложение Inno Setup (этот файл должен быть в другой директории)
-## Инструкции к исполняемому файлу app.py
-#### 1. В app.py важно указать правильный путь к директории модели model_path = resource_path("model/ai_imageclassifier.keras") или model_path = resource_path("ai_imageclassifier.keras") если модель находится в одной директории с остальными файлами. При создании .exe желательно все файлы разместить в одной директории чтобы избежать проблем при запуске приложения.
-
 # AI IMAGE CLASSIFIER & ENHANCER
 ## Description
 ### Скачиваем dataset из kaggle или других ресурсов
@@ -159,3 +147,18 @@
 #### В будущем, что наиболее вероятно, будет использоваться одна из существующих моделей, например: EfficientNetB3 или ResNet50, а затем, при необходимости Vision Transformer (ViT) или SwinTransformer. Возможно будут использованы другие модели такие как: EfficientNet В0-B7, ResNet101, ConvNeXt и т.д.
 
 #### Будущее развитие проекта предусматривает определение поддельных (созданных с помощью нейросетей) или отредактированных документов: фото, подписи, логотипы, печати и т.д. как часть разработки системы безопасности при проведении транзакций.
+
+# Документация для создания файла .exe (Windows) и .app (MacOS) упаковки и развертывания приложения
+
+#### 1. Сoздаем директорию для хранения модели, данных (background.jpg, logo.png, requirements.txt, .ico, .icns etc.), инструкций и исполняемых файлов, например app.py
+#### 2. Устанавливаем pyinstaller в cmd с помощью команды pip install pyinstaller
+#### 3. Создаем файлы инструкций: app.spec и setup.py для создания .exe при вызове pyinstaller app.spec в cmd из директории проекта
+#### 4. Собираем зависимости в файл requirements.txt (команда !pip freeze > requirements.txt в ячейке Jupiter notebook). Файл сохраняется в директории проекта
+#### 5. Скачиваем иконки для логотипов или приложения с сайта https://www.logoai.com например https://www.logoai.com/png/1360 (для нашего приложения)
+#### 6. Конвертируем нашу иконку в формат .ico (Windows) онлайн https://convertico.com или в формат .icns (MacOs) онлайн https://cloudconvert.com/png-to-icns
+#### 7. Скачиваем Inno Setup с ресурса https://jrsoftware.org/isinfo.php или сразу с https://jrsoftware.org/isdl.php
+#### 8. Создаем установочный файл setup.iss который запускаем через приложение Inno Setup (этот файл должен быть в другой директории)
+
+## Инструкции к исполняемому файлу app.py
+
+#### В app.py важно указать правильный путь к директории модели model_path = resource_path("model/ai_imageclassifier.keras") или model_path = resource_path("ai_imageclassifier.keras") если модель находится в одной директории с остальными файлами. При создании .exe желательно все файлы разместить в одной директории чтобы избежать проблем при запуске приложения.
