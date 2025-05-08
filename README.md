@@ -3,7 +3,7 @@
 #### 2. Устанавливаем pyinstaller в cmd с помощью команды pip install pyinstaller
 #### 3. Создаем файлы инструкций: app.spec и setup.py для создания .exe при вызове pyinstaller app.spec в cmd из директории проекта
 #### 4. Собираем зависимости в файл requirements.txt (команда !pip freeze > requirements.txt в ячейке Jupiter notebook). Файл сохраняется в директории проекта
-#### 5. Скачиваем иконки для логотипов или прилодения с сайта https://www.logoai.com например https://www.logoai.com/png/1360 (для нашего приложения)
+#### 5. Скачиваем иконки для логотипов или приложения с сайта https://www.logoai.com например https://www.logoai.com/png/1360 (для нашего приложения)
 #### 6. Конвертируем нашу иконку в формат .ico (Windows) онлайн https://convertico.com или в формат .icns (MacOs) онлайн https://cloudconvert.com/png-to-icns
 #### 7. Скачиваем Inno Setup с ресурса https://jrsoftware.org/isinfo.php или сразу с https://jrsoftware.org/isdl.php
 #### 8. Создаем установочный файл setup.iss который запускаем через приложение Inno Setup (этот файл должен быть в другой директории)
